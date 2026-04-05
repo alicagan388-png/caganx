@@ -1,0 +1,9 @@
+{
+  "name": "CaganX Quantum AI & Vision Lab",
+  "description": "CaganX Vision Lab ve Quantum Intent Engine ile geleceğin yapay zeka arayüzü.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
