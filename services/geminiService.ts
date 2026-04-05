@@ -9,10 +9,10 @@ export const getApiKey = () => {
   try {
     // In this environment, process.env is usually globally available or injected.
     // We check both API_KEY (user selected) and GEMINI_API_KEY (system default).
-    const key = (typeof process !== 'undefined' && process.env?.API_KEY) || 
-                (typeof process !== 'undefined' && process.env?.GEMINI_API_KEY) ||
-                (window as any).process?.env?.API_KEY ||
-                (window as any).process?.env?.GEMINI_API_KEY ||
+const key = import.meta.env.VITE_GEMINI_API_KEY || 
+            (typeof process !== 'undefined' && process.env?.VITE_GEMINI_API_KEY) ||
+            (window as any).process?.env?.VITE_GEMINI_API_KEY || 
+            '';
                 '';
     return key;
   } catch (e) {
