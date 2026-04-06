@@ -8,7 +8,7 @@ import { generateUUID } from '../utils';
 export const getApiKey = () => {
   try {
     // In this environment, process.env is usually globally available or injected.
-    // We check both API_KEY (user selected) and GEMINI_API_KEY (system default).
+    // We check both API_KEY (user selected) and VITE_GEMINI_API_KEY (system default).
 const key = import.meta.env.VITE_GEMINI_API_KEY || 
             (typeof process !== 'undefined' && process.env?.VITE_GEMINI_API_KEY) ||
             (window as any).process?.env?.VITE_GEMINI_API_KEY || 
